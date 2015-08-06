@@ -1,0 +1,36 @@
+.button{
+	margin: 100px auto;
+	text-align: center;
+}
+.button a{
+	font-size: 30px;
+	font-family: "Microsoft Yahei";
+	color: #fff;
+	text-decoration:none;
+	padding: 15px 30px;
+	background-color: #922;
+	box-shadow: 1px 0 0 #700,   0 1px 0 #700, 
+				2px 1px 0 #700, 1px 2px 0 #700,
+				3px 2px 0 #700, 2px 3px 0 #700,
+				4px 3px 0 #700, 3px 4px 0 #700,
+				4px 4px 2px #000;
+}
+
+.contact{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	text-align: center;
+	width: 200px;
+	padding: 10px 0;
+	background-color: #eee;
+}
+.contact a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #555;
+	margin-right: 13px;
+	padding-left: 5px;
+	border-left: 13px solid #999;
+}

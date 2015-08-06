@@ -1,0 +1,115 @@
+div{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #999;
+}
+.header{
+	text-align: center;
+	color: #444;
+}
+
+
+.canvas_container{
+	background-color: #fff8dc;
+	width: 700px;
+	font-size: 0;
+	margin: 0 auto;
+}
+
+.color,.canvas{
+	display: inline-block;
+	vertical-align: top;
+	margin: 30px auto;
+}
+.color{
+	margin-left: 30px;
+}
+.canvas{
+	margin-left: 70px;
+}
+
+.red,.yellow,.blue,.white{
+	width: 40px;
+	height: 40px;
+	border: 1px solid #000;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+.red{
+	background-color: #f00;
+}
+.yellow{
+	background-color: #ff0;
+}
+.blue{
+	background-color: #00f;
+}
+.white{
+	background-color: #fff;
+}
+
+
+.canvas{
+	border: 1px solid #000;
+	background-color: #fff;
+}
+.r2,.r3,.r4{
+	border-top: 8px solid #000;
+}
+.c2,.c3,.c4{
+	border-left: 8px solid #000;
+}
+
+.r1,.r2,.r3,.r4{
+	/*border: 1px solid blue;*/
+	font-size: 0;
+}
+.r1 *{
+	height: 60px;
+}
+.r2 *{
+	height: 140px;
+}
+.r3 *{
+	height: 60px;
+}
+.r4 *{
+	height: 80px;
+}
+.c1,.c2,.c3,.c4{
+	display: inline-block;
+}
+.c1{
+	width: 80px;
+}
+.c2{
+	width: 240px;
+}
+.c3{
+	width: 60px;
+}
+.c4{
+	width: 120px;
+}
+
+
+.contact{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 200px;
+	padding: 10px 0;
+	background-color: #eee;
+}
+.contact a{
+	font-size: 13px;
+	text-decoration: none;
+	color: #555;
+	margin-right: 13px;
+	padding-left: 5px;
+	border-left: 13px solid #999;
+}
