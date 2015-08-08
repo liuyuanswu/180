@@ -1,0 +1,41 @@
+body{
+	font-family: arial,"Microsoft Yahei";
+	margin: 0;
+}
+
+.bshadow{
+	box-shadow: 0 0 0 0 #666;
+	cursor: pointer;
+}
+.tshadow{
+	text-shadow: 0 0 0 #666;
+}
+
+header{
+	width: 100%;
+	height: 4em;
+	background-color: #50d;
+}
+header a{
+	line-height: 4em;
+	margin-left: 1em;
+	text-decoration: none;
+	color: #fff;
+}
+
+main{
+	margin: 4em auto;
+	width: 500px;
+	text-align: center;
+}
+
+#proverb{
+	margin: 6em auto 0 auto;
+	padding: 10px;
+}
+#text{
+	font-size: 34px;
+}
+#area{
+	font-size: 18px;
+}
