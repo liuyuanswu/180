@@ -13,13 +13,11 @@
 
 		<h1>掷骰子</h1>
 
-		<div>
 
-			<canvas id="dice">您的浏览器不支持HTML5的canvas标签</canvas>
+		<canvas id="canvas">您的浏览器不支持HTML5的canvas标签</canvas>
 
-		</div>
 
-		<div id="button">摇一摇</div>
+		<div id="button" onclick="throwdice()">摇一摇</div>
 
 		<footer>
 
@@ -33,7 +31,120 @@
 		</footer>
 
 		<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-		<script type="text/javascript" src="js/12_dice_roller.js"></script>
+		<script type="text/javascript">
+
+			var cwidth = 400;
+			var cheight = 300;
+			var dicex = 30;
+			var dicey = 50;
+			var dicewidth = 100;
+			var diceheight = 100;
+			var dotrad = 6;
+			var ctx;
+			var dx;
+			var dy;
+			
+			function throwdice() {
+				var ch = 1+Math.floor(Math.random()*6);
+				dx = dicex;
+				dy = dicey;
+				drawface(ch);
+				dx = dicex + 150;
+				ch=1 + Math.floor(Math.random()*6);
+				drawface(ch);
+			}
+			function drawface(n) {
+			  ctx = document.getElementById('canvas').getContext('2d');  
+			  ctx.lineWidth = 5;
+			  ctx.clearRect(dx,dy,dicewidth,diceheight);
+			  ctx.strokeRect(dx,dy,dicewidth,diceheight)
+			  var dotx;
+			  var doty;
+			  ctx.fillStyle = "#009966";
+				switch(n) {
+					case 1:
+					 draw1();
+					 break;
+					case 2:
+					 draw2();
+					 break;
+					case 3:
+					 draw2();
+					 draw1();
+					 break;
+					case 4:
+					 draw4();
+					 break;
+					case 5:
+					 draw4();
+					 draw1();
+					 break;
+					case 6:
+					 draw4();
+					 draw2mid();
+					 break;
+				}
+			}
+			function draw1() {
+				var dotx;
+				var doty;
+				ctx.beginPath();
+				dotx = dx + .5*dicewidth;
+				doty = dy + .5*diceheight;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				ctx.closePath();
+				ctx.fill();
+			}
+			function draw2() {
+				var dotx;
+				var doty;
+				ctx.beginPath();
+				dotx = dx + 3*dotrad;
+				doty = dy + 3*dotrad;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				dotx = dx+dicewidth-3*dotrad;
+				doty = dy+diceheight-3*dotrad;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				ctx.closePath();
+				ctx.fill();
+			}
+			function draw4() {
+				var dotx;
+				var doty;
+				ctx.beginPath();
+				dotx = dx + 3*dotrad;
+				doty = dy + 3*dotrad;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				dotx = dx+dicewidth-3*dotrad;
+				doty = dy+diceheight-3*dotrad;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				ctx.closePath();
+				ctx.fill();
+				ctx.beginPath();
+				dotx = dx + 3*dotrad;
+				doty = dy + diceheight-3*dotrad;  //no change
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				dotx = dx+dicewidth-3*dotrad;
+				doty = dy+ 3*dotrad;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				ctx.closePath();
+				ctx.fill();	
+			}
+			function draw2mid() {
+				var dotx;
+				var doty;
+				ctx.beginPath();
+				dotx = dx + 3*dotrad;
+				doty = dy + .5*diceheight;
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				dotx = dx+dicewidth-3*dotrad;
+				doty = dy + .5*diceheight; //no change
+				ctx.arc(dotx,doty,dotrad,0,Math.PI*2,true);
+				ctx.closePath();
+				ctx.fill();
+			}
+
+		</script>
 
 	</body>
 
