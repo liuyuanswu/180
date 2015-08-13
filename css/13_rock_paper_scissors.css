@@ -1,0 +1,79 @@
+*{
+	/*border: 1px solid #f00;*/
+}
+
+body{
+	margin: 0;
+	text-align: center;
+}
+
+#game_container,#choose_container{
+	margin: 0 auto 100px auto;
+
+	width: 1000px;
+}
+#game_container div{
+	display: inline-block;
+}
+#game_container h1{
+	margin-bottom: 0;
+
+	color: #d14;
+}
+#game_container hr{
+	margin-bottom: 40px;
+}
+#message{
+	width: 200px;
+	vertical-align: bottom;
+
+	font-size: 40px;
+	color: #4b7;
+}
+
+#choose_container{
+	text-align: right;
+}
+#choose_container div{
+	display: inline-block;
+
+	text-align: center;
+	line-height: 30px;
+
+	width: 100px;
+	height: 30px;
+
+	background-color: #0dd;
+	cursor: pointer;
+}
+#choose_container div:last-child{
+	margin-right: 40px;
+}
+
+footer nav{
+	position: relative;
+	left: 20px;
+	bottom: 0px;
+
+	text-align: left;
+}
+footer nav a{
+	text-decoration: none;
+	color: #c30;
+}
+
+.shake {
+	-webkit-animation: shake 1s;
+	-moz-animation: shake 1s;
+	-ms-animation: shake 1s;
+	animation: shake 1s;
+}
+
+@keyframes shake{
+	0%{transform:translateY(0px);}
+	10%{transform:translateY(5px);}
+	40%{transform:translateY(-5px);}
+	60%{transform:translateY(5px);}
+	80%{transform:translateY(-5px);}
+	100%{transform:translateY(0px);}
+}
