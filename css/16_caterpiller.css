@@ -1,0 +1,53 @@
+body{
+	padding: 0;
+	margin: 0;
+
+	background:#000;
+	color: #fff;
+}
+header nav{
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+a{
+	color: #ccc;
+	text-decoration: none;
+}
+a:not(:first-child){
+	margin-left: 15px;
+}
+
+.container{
+	/*border: 10px solid #f00;*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.move{
+	/*border: 10px solid #00f;*/
+	width: 10px;
+	height: 10px;
+	background: #eee;
+	border-radius: 5px;
+	box-shadow: 0 0 10px 10px #fff;
+	animation: heartbeat 1s infinite;
+}
+.leave{
+	width: 20px;
+	height: 20px;
+	background: #eee;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 10px #fff;
+}
+
+@keyframes heartbeat{
+	0%{transform:scale(1);}
+	50%{transform:scale(1.2);}
+	100%{transform:scale(1);}
+}
+@keyframes enlarge{
+	0%{transform:scale(1);}
+	50%{transform:scale(2);}
+	100%{transform:scale(1);}
+}
